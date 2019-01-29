@@ -1,10 +1,8 @@
 package com.stackroute.service;
 
-//import com.stackroute.domain.Track;
 import com.stackroute.domain.User;
 import com.stackroute.exceptions.TrackAlreadyExistsException;
 import com.stackroute.exceptions.TrackNotFoundException;
-//import com.stackroute.repository.MuzixRepository;
 import com.stackroute.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,8 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
-//implementation of  MuzixService//
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
@@ -25,7 +23,8 @@ public class UserServiceImpl implements UserService {
     //Overrided method for saveTrack//
     @Override
     public User saveUser(User user) throws TrackAlreadyExistsException {
-        if (userRepository.existsById(user.getUserid())) {
+
+        if (userRepository.existsById(user.getUserId())) {
             throw new TrackAlreadyExistsException("user already exists");
         }
         User savedUser = userRepository.save(user);
@@ -61,6 +60,9 @@ public class UserServiceImpl implements UserService {
         Optional<User> muzix = userRepository.findById(userid);
         User muzix1 = muzix.get();
         muzix1.setUserComments(comment);
+
+
+
         User savedMuzix = userRepository.save(muzix1);
         return savedMuzix;
     }
