@@ -1,9 +1,9 @@
-package com.example.microservice.user.service;
+package com.stackroute.microservice.user.service;
 
-import com.example.microservice.user.domain.Track;
-import com.example.microservice.user.exceptions.TrackAlreadyExistsException;
-import com.example.microservice.user.exceptions.TrackNotFoundException;
-import com.example.microservice.user.repository.MuzixRepository;
+import com.stackroute.microservice.user.domain.Track;
+import com.stackroute.microservice.user.exceptions.TrackAlreadyExistsException;
+import com.stackroute.microservice.user.exceptions.TrackNotFoundException;
+import com.stackroute.microservice.user.repository.MuzixRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

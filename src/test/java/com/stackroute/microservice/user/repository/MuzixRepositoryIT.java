@@ -1,6 +1,6 @@
-package com.example.microservice.user.repository;
+package com.stackroute.microservice.user.repository;
 
-import com.example.microservice.user.domain.Track;
+import com.stackroute.microservice.user.domain.Track;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

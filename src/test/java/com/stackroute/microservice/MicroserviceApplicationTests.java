@@ -1,4 +1,4 @@
-package com.example.microservice;
+package com.stackroute.microservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
