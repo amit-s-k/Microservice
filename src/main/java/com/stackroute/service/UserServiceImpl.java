@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     //Overrided method for saveTrack//
     @Override
     public User saveUser(User user) throws TrackAlreadyExistsException {
-        if (userRepository.existsById(user.getUserId())) {
+        if (userRepository.existsById(user.getUserid())) {
             throw new TrackAlreadyExistsException("user already exists");
         }
         User savedUser = userRepository.save(user);
